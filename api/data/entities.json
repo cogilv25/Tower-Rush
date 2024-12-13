@@ -1,0 +1,154 @@
+{
+	"default":
+	{
+		"density": 0.5,
+		"friction": 0.5,
+		"restitution": 0,
+		"bodyType": 0,
+		"categories": 1,
+		"mask": 65535,
+		"group": 0,
+		"fixedRotation": false,
+		"isSensor": false,
+		"sleepingAllowed": true,
+		"requiresIndex": false,
+		"linearDamping": 0,
+		"private": false,
+		"sendState": false,
+		"userData": {}
+	},
+	"wall":
+	{
+		"restitution": 0,
+		"friction": 0,
+		"userData": {"type": "wall"}
+	},
+	"floor":
+	{
+		"friction": 0,
+		"restitution": 0,
+		"requiresIndex": true,
+		"userData": {"type": "floor"}
+	},
+	"wall_bound":
+	{
+		"friction": 0,
+		"restitution": 0,
+		"categories": 17,
+		"userData": {"type": "wall_bound"}
+	},
+	"floor_bound":
+	{
+		"friction": 0,
+		"restitution": 0,
+		"categories": 17,
+		"requiresIndex": true,
+		"userData": {"type": "floor_bound"}
+	},
+	"cake":
+	{
+		"mask": 2,
+		"categories": 8,
+		"isSensor": true,
+		"requiresIndex": true,
+		"userData": {"type": "cake"}
+	},
+	"pressure_plate":
+	{
+		"mask": 2,
+		"categories": 8,
+		"isSensor":true,
+		"requiresIndex": true,
+		"sendState": true,
+		"userData": {"type": "pressure_plate"}
+	},
+	"table":
+	{
+		"categories": 8,
+		"mask": 65533,
+		"userData": {"type": "table"}
+	},
+	"heavy_door":
+	{
+		"restitution": 0,
+		"density": 1000,
+		"friction": 0,
+		"categories": 4,
+		"mask": 2,
+		"bodyType": 2,
+		"fixedRotation": true,
+		"requiresIndex": true,
+		"userData": {"type": "heavy_door"}
+	},
+	"heavy_door_mechanism":
+	{
+		"activationEnergy": 3,
+		"stateChangeFunc": "heavy_door",
+		"mask":0,
+		"categories": 8,
+		"isSensor": true,
+		"force": 10,
+		"requiresIndex": true,
+		"private": true,
+		"complex": true,
+		"userData": {"type": "heavy_door_mechanism"}
+	},
+	"heavy_door_stopper":
+	{
+		"restitution": 0,
+		"mask":4,
+		"categories":2,
+		"requiresIndex": true,
+		"userData": {"type": "heavy_door_stopper"}
+	},
+	"ladder":
+	{
+		"isSensor": true,
+		"categories": 8,
+		"mask": 2,
+		"userData": {"type": "ladder"}
+	},
+	"player_counter":
+	{
+		"mask": 2,
+		"categories": 65535,
+		"isSensor": true,
+		"requiresIndex": true,
+		"private": true,
+		"complex": true,
+		"userData": {"type": "player_counter"}
+	},
+	"player_s":
+	{
+		"friction": 0,
+		"restitution": 0,
+		"bodyType": 2,
+		"categories": 2,
+		"mask": 65533,
+		"fixedRotation": true,
+		"sleepingAllowed": false,
+		"userData": {"type": "player", "id": 0}
+	},
+	"player_m":
+	{
+		"friction": 0,
+		"restitution": 0,
+		"bodyType": 2,
+		"categories": 2,
+		"mask": 65533,
+		"fixedRotation": true,
+		"sleepingAllowed": false,
+		"userData": {"type": "player", "id": 0}
+	},
+	"player_l":
+	{
+		"friction": 0,
+		"restitution": 0,
+		"bodyType": 2,
+		"categories": 2,
+		"mask": 65533,
+		"fixedRotation": true,
+		"sleepingAllowed": false,
+		"userData": {"type": "player", "id": 0}
+	}
+}

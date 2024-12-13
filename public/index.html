@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>Hunger</title>
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="style.css">
+
+        <!-- External Dependencies -->
+		<script src="/socket.io/socket.io.js" defer></script>
+        <script src="https://code.createjs.com/1.0.0/easeljs.min.js" defer></script>
+        <script src="https://code.createjs.com/1.0.0/preloadjs.min.js" defer></script>
+        <script src="https://code.createjs.com/1.0.0/soundjs.min.js" defer></script>
+
+
+        <!-- Internal Dependencies -->
+		<script src="keyboard.js" defer></script>
+
+        <!--    Main Application   -->
+        <script src="app.js" defer></script>
+	</head>
+	<body style="display: flex; flex-direction: column">
+		<div id="main_menu">
+			<div id="auth_view">
+				<form id="auth_form">
+					<h1> <span id="login_button" class="auth_selected">Login</span> or <span id="register_button" class="auth_unselected">Register</span></h1>
+					<input id="username" type="text" autocomplete="off" placeholder="Username" maxlength="32" autofocus>
+					<input id="password" type="password" placeholder="Password" maxlength="32">
+					<button style="width: 155px" id="auth_button" type="submit">Login</button>
+				</form>
+			</div>
+			<div id="lobby_view" style="display: none;">
+				<h1> Join or Create a Lobby </h1>
+				<div id="lobbies"></div>
+				<div id="lobby_creator_area">
+					<div id="lobby_creator_transition"></div>
+					<div id="lobby_creator_container">
+						<form id="lobby_creator">
+							<input id="lobby_name" autocomplete="off" maxlength=20>
+							<div class="vr"></div>
+							<button id="create_lobby" type="submit">Create Lobby</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="game_view" style="display: none;">
+			<canvas id="canvas" width="800" height="600"></canvas>
+			<div id="hud">
+				<div id="h_bars">
+					<div id="h_bar" class="h_bar">
+						<div id="h_bar_bar" class="h_bar_bar"></div>
+					</div>
+					<div id="h_bar_divs">
+						<div class="vr"></div>
+						<div style="width: 60px;"></div>
+						<div class="vr"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
